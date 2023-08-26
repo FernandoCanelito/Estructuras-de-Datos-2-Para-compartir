@@ -2,19 +2,27 @@
 #include <fstream>
 #include <cstdlib>
 
+
 using namespace std;
 
 int main()
 {
     int opc;
 
-    do
-    {
+    enum {
+        SALIR,
+        CUENTA_CEROS,
+        CUENTA_ACREEDORA,
+        CUENTA_DEUDORA
+    };
+        cout << endl <<"               Menu" << endl <<endl;
+        cout << CUENTA_CEROS << ") Mostrar cuentas con saldo en ceros" << endl;
+        cout << CUENTA_ACREEDORA <<") Mostrar cuentas con saldo acreedor (+)" << endl;
+        cout << CUENTA_DEUDORA <<") Mostrar cuentas con saldo deudor (-)" << endl;
+        cout << SALIR << ") Salir" << endl << endl;
 
-        cout << "Menu" << endl;
-        cout << "Mostrar cuentas con saldo en ceros" << endl;
-        cout << "Mostrar cuentas con saldo acreedor" << endl;
-        cout << "Mostrar cuentas con saldo deudor" << endl;
+        cout << "       SELECCIONE UNA OPCION: ?" << endl;
+
         cin >> opc;
         switch (opc)
         {
